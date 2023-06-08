@@ -18,12 +18,7 @@ resource "azurerm_subnet" "example" {
   service_endpoints    = ["Microsoft.Storage"]
 }
 
-# Generate random resource group name
-resource "random_pet" "rg_name" {
-  prefix = var.resource_group_name_prefix
-}
-
-resource "random_pet" "azurerm_kubernetes_cluster_name" {
+/*resource "random_pet" "azurerm_kubernetes_cluster_name" {
   prefix = "cluster"
 }
 
@@ -57,4 +52,4 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     network_plugin    = "kubenet"
     load_balancer_sku = "standard"
   }
-}
+}*/
